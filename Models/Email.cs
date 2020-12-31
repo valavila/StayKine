@@ -8,7 +8,8 @@ namespace MillionMealsGoldLeaf.Models
 {
     public class Email
     {
-        
+        [Key]
+        public int id { get; set; }
         [DataType(DataType.EmailAddress)]
         public string email { get; set; }
 

@@ -1,4 +1,4 @@
-﻿
+﻿@model Email
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -14,14 +14,18 @@
 </p>
 <div class="row">
     <div class="col-md">
-        <div class="email">
-            <label class="connect">Connect with us:</label>
-            <input placeholder="email">
-            <span class="text-danger"></span>
-               
-        </div>
-        <center><button type="submit" class="btn btn-primary">Submit</button></center>        
-   
+        <form enctype="multipart/form-data" asp-controller="home" asp-action="create" method="post">
+            <div class="email">
+                <label asp-for="email" class="connect"></label>
+                <input asp-for="email" placeholder="email">
+                <span asp-validation-for="email" class="text-danger"></span>
+
+            </div>
+            <center><button type="submit" class="btn btn-primary">Submit</button></center>
+        </form>
+
+
+
     </div>
 </div>
 

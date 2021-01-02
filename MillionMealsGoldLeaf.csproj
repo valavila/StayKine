@@ -5,19 +5,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Style\**" />
+    <Content Remove="Style\**" />
+    <EmbeddedResource Remove="Style\**" />
+    <None Remove="Style\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="wwwroot\RobotoSlab-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\RobotoSlab-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Style\" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="bootstrap" Version="4.5.3" />
     <PackageReference Include="Microsoft.Build.Tasks.Git" Version="1.0.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.1" />

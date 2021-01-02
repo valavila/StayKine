@@ -9,8 +9,8 @@ using MillionMealsGoldLeaf.Data;
 namespace MillionMealsGoldLeaf.Migrations
 {
     [DbContext(typeof(EmailContext))]
-    [Migration("20201231182949_initial")]
-    partial class initial
+    [Migration("20210102171840_email")]
+    partial class email
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,6 +28,7 @@ namespace MillionMealsGoldLeaf.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("isSubscribed")

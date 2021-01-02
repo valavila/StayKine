@@ -2,7 +2,7 @@
 
 namespace MillionMealsGoldLeaf.Migrations
 {
-    public partial class initial : Migration
+    public partial class email : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +12,7 @@ namespace MillionMealsGoldLeaf.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    email = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    email = table.Column<string>(type: "nvarchar(max)", nullable: false, ),
                     isSubscribed = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>

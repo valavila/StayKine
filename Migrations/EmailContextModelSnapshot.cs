@@ -26,6 +26,7 @@ namespace MillionMealsGoldLeaf.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("isSubscribed")
